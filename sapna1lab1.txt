@@ -1,0 +1,21 @@
+I used ...
+1. dw: to move the cursor to the beginning of the word to delete that word.
+2. d2w: which deletes 2 words number can be changed for deleting the number.
+3. r: to replace the letter 
+4. ce: to change until the end of a word .
+5. P: put the previously deleted text after the cursor.
+6. G: to move to the start of the file.
+7. gg: to move to the bottom of the file.
+8. R: to replace more than one character.
+9. Y: operator to copy text using a visual mode.
+10. P: to paste it.
+11. O: opens a line above the cursor.
+12. a: inserts texts after the cursor.
+13. A: inserts text after the cursor.
+14. e: command moves to the end of a word.
+15. R: enters replace mode .
+16. CTRL: R to redo.
+17. x: to delete the unwanted character.
+18. :wq: to save and exit.
+19. u: to undo the whole line.
+20. 0: to move to the start of the line
