@@ -6,6 +6,77 @@ purnima,m,1
 sanjana,m,9
 shreya,M,3
 sahana,m,1
+
+1. sed -n ' /CEO/p' sap.csv
+sanjana,CEO
+2. sed -n '/M/p' sap.csv
+sunny,M
+samtha,M
+shreya,M
+lavisha,M
+sammi,M
+
+3.lsed -n ' /general manager/p' sap.csv
+purnima,general manager
+avisha,M,3
+
+4.sammi,M,3
+sed -n '/m/p' sap.csv
+saranya,m
+samtha,M
+honey,m
+purnima,m
+sanjana,m
+sahana,m
+sammi,M
+
+5.sed -n '/1/p' sap.csv
+sunny,M,1
+6. grep -i "M" sap.csv
+sunny,M,1
+saranya,m,5
+samtha,M,4
+honey,m,4
+purnima,m,1
+sanjana,m,9
+shreya,M,3
+sahana,m,1
 lavisha,M,3
 sammi,M,3
+grep -i "i" sap.csv
+purnima,m,1
+lavisha,M,3
+sammi,M,3
+ grep -i "s" sap.csv
+sunny,M,1
+saranya,m,5
+samtha,M,4
+sanjana,m,9
+shreya,M,3
+sahana,m,1
+lavisha,M,3
+sammi,M,3
+grep -i "a" sap.csv
+saranya,m,5
+samtha,M,4
+purnima,m,1
+sanjana,m,9
+shreya,M,3
+sahana,m,1
+lavisha,M,3
+sammi,M,3
+grep -i "a" sap.csv
+saranya,m,5
+samtha,M,4
+purnima,m,1
+sanjana,m,9
+shreya,M,3
+sahana,m,1
+lavisha,M,3
+sammi,M,3
+purnima,m,1 sed -n '/4/p' sap.csv
+samtha,M,4
+honey,m,4
+
+sahana,m,1
 
