@@ -1,0 +1,108 @@
+1. command to delete all blank line
+   sed 's/ //g' emp.lst
+1234|pinki|director|marketing|14/02/2015|67900
+1345|shriya|manager|sales|15/03/2016|45000
+1678|priya|CEO|sales|16/04/2018|89000
+1534|hanna|assistant|23/05/2017|90000
+1789|piyush|director|sales|24/07/2020|10000
+5679|pritika|manager|marketing|12/10/2012|70000
+1564|tuli|CEO|sales|22/05/2013|45000
+2314|simmi|director|sales|25/07/2014|46789
+9999|prags|manager|marketing|5/09/2022
+8888|simran|CEO|sales|4/12/2011
+2212|sayna|manager|marketing|12/11/1996
+2222|kitty|assistant|HR|21/09/2009
+
+2. print only odd number lines of the file
+   awk 'NR % 2 == 1' emp.lst
+1234|pinki|director|marketing|14/02/2015|67900
+1678|priya|CEO|sales|16/04/2018|89000
+1789|piyush|director|sales|24/07/2020|10000
+1564|tuli|CEO|sales|22/05/2013|45000 
+9999|prags|manager|marketing|5/09/2022
+2212|sayna|manager|marketing|12/11/1996
+
+3.for even
+   awk 'NR % 2' emp.lst
+1234|pinki|director|marketing|14/02/2015|67900
+1678|priya|CEO|sales|16/04/2018|89000
+1789|piyush|director|sales|24/07/2020|10000
+1564|tuli|CEO|sales|22/05/2013|45000 
+9999|prags|manager|marketing|5/09/2022
+2212|sayna|manager|marketing|12/11/1996
+
+4. cat > emp.lst
+   1234|pinki|director|marketing|14/02/2015|67900
+1345|shriya|manager|sales|15/03/2016|45000
+1678|priya|CEO|sales|16/04/2018|89000
+1534|hanna|assistant|23/05/2017|90000
+1789|piyush|director|sales|24/07/2020|10000
+5679|pritika|manager|marketing|12/10/2012|70000
+1564|tuli|CEO|sales|22/05/2013|45000 
+2314|simmi|director|sales|25/07/2014|46789
+8900|prags|manager|marketing
+
+5. awk -F "|" '{print $0}' emp.lst
+    1234|pinki|director|marketing|14/02/2015|67900
+1345|shriya|manager|sales|15/03/2016|45000
+1678|priya|CEO|sales|16/04/2018|89000
+1534|hanna|assistant|23/05/2017|90000
+1789|piyush|director|sales|24/07/2020|10000
+5679|pritika|manager|marketing|12/10/2012|70000
+1564|tuli|CEO|sales|22/05/2013|45000 
+2314|simmi|director|sales|25/07/2014|46789
+9999|prags|manager|marketing|5/09/2022
+8888|simran|CEO|sales|4/12/2011
+2212|sayna|manager|marketing|12/11/1996
+2222|kitty|assistant|HR|21/09/2009
+
+6. awk -F "|" 'NR==1,NR==4{print $0}' emp.lst
+   1234|pinki|director|marketing|14/02/2015|67900
+1345|shriya|manager|sales|15/03/2016|45000
+1678|priya|CEO|sales|16/04/2018|89000
+1534|hanna|assistant|23/05/2017|90000
+
+7.awk -F "|" 'NR==1,NR==5{print $1,$2}' emp.lst
+   1234 pinki
+1345 shriya
+1678 priya
+1534 hanna
+1789 piyush
+
+8.awk -F "|" '{print $5}' emp.lst
+  14/02/2015
+15/03/2016
+16/04/2018
+90000
+24/07/2020
+12/10/2012
+22/05/2013
+25/07/2014
+5/09/2022
+4/12/2011
+12/11/1996
+21/09/2009
+
+9. awk -F "|" '{print $1}' emp.lst
+1234
+1345
+1678
+1534
+1789
+5679
+1564
+2314
+9999
+8888
+2212
+2222
+
+
+
+
+
+
+
+
+
+
